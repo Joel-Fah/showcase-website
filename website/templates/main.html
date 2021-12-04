@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <title>
+      {% block title %}
+        
+      {% endblock title %}
+  </title>
+
+  <!-- Favicons -->
+  <link href=" {% static 'assets/img/logo1.png' %} " rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {% static 'assets/vendor/aos/aos.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/glightbox/css/glightbox.min.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href=" {% static 'assets/css/style.css' %} " rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+        <img src=" {% static 'assets/img/logo1.png' %} " alt="logo enterprise">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill d-flex align-items-center"></i>
+        <div style="margin-left: 3px;">
+            <span class="text-muted">Email:</span><br>
+            <a href="mailto:joelfah2003@gmail.com"><strong>joelfah2003@gmail.com</strong></a>
+        </div>
+
+        <i class="bi bi-phone-fill d-flex align-items-center ms-4"></i>
+        <div style="margin-left: 3px;">
+            <span class="text-muted">Telephone:</span><br>
+            <span><strong>+237 656 997 810</strong></span>
+        </div>
+
+        <i class="bi bi-clock-fill d-flex align-items-center ms-4"></i>
+        <div style="margin-left: 3px;">
+            <span class="text-muted">Open hours:</span><br>
+            <span><strong>Mon - Fri, 7am - 5pm</strong></span><br>
+        </div>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#" class="instagram"><i class="bi bi-telegram"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center shadow-lg">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="">Genie D'Afrik<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="{% url 'home' %}" class="logo"><img src=" {% static 'assets/img/logo.png' %} " alt="logo"></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% if nbar == 'home' %} #hero {% else %} {% url 'home' %} {% endif %}">Home</a></li>
+            <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><a href="{% if nbar == 'home' %} #services {% else %} {% url 'services' %} {% endif %}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Service 0</a></li>
+                <li class="dropdown"><a href="#"><span>Service 1    </span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Service 1.1</a></li>
+                    <li><a href="#">Service 1.2</a></li>
+                    <li><a href="#">Service 1.3</a></li>
+                    <li><a href="#">Service 1.4</a></li>
+                    <li><a href="#">Service 1.5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+                <li><a href="#">Service 4</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="{% if nbar == 'home' %} #realisation {% else %} {% url 'realisation' %} {% endif %}">Realisation</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% if nbar == 'home' %} #contact {% else %} {% url 'contact' %} {% endif %}">Contacts</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'about' %} active {% endif %}" href="{% if nbar == 'home' %} #about {% else %} {% url 'about' %} {% endif %}">Genie D'Afrik</a></li>
+            <li><a class="button" href="#">Obtenir un devis<i class="bi bi-journal-check"></i></a></li>
+          <div class="d-flex" style="margin-left: 5%;">
+          </div>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-up">
+    {% block body %}
+    
+    {% endblock body %}
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>
+              Make sure to subscribe to our newsletter to receive products and services updates.
+            </p>
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Your email address...">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top bg-dark">
+      <div class="container">
+          <div class="row">
+              
+            <div class="col-lg-3 col-md-6 footer-contact">
+                <h2>Genie D'Afrik<span>.</span></h2>
+                <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="" class="img-fluid"> -->
+                <p>
+                    Awae-Ewonkang <br>
+                    Yaounde, BP 30947 Yaounde <br>
+                    Cameroon <br><br>
+                    Phone:<strong></strong> kit0263559965+*9-+<br>
+                    Email:<strong></strong> kit0263559965+*9-+>
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% if nbar == 'home' %}#{% else %}{% url 'home' %}{% endif %}">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'realisation' %}">Realisation</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contacts</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Retail & Consumer</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}" class="disabled">Sciences & Healthcare</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}" class="disabled">Industrial & Chemical</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}" class="disabled">Power Generation</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}" class="disabled">Food & Beverage</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}" class="disabled">Oil & Gas</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Social Networks</h4>
+                <p>Let us be social. Know more about us and our activities via the links below.</p>
+                <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyTPS</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Made with <i class="bi bi-heart-fill"></i> and <i class="bi bi-github"></i>.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src=" {% static 'assets/vendor/aos/aos.js' %} "></script>
+  <script src=" {% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/glightbox/js/glightbox.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+  <!-- <script src=" {% static 'assets/vendor/php-email-form/validate.js' %} "></script> -->
+  <script src=" {% static 'assets/vendor/purecounter/purecounter.js' %} "></script>
+  <script src=" {% static 'assets/vendor/swiper/swiper-bundle.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/waypoints/noframework.waypoints.js' %} "></script>
+
+  <!-- Template Main JS File -->
+  
+  <script src=" {% static 'assets/js/main.js' %} "></script>
+</body>
+
+</html>

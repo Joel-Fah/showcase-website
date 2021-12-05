@@ -1,0 +1,123 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<!-- Title of the page. -->
+{% block title %}
+  Contacts
+{% endblock title %}
+
+<!-- Body of the page -->
+
+{% block body %}
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="section-title">
+        <!-- <h2>Contact</h2> -->
+        <h3>Contact <span>Us</span>.</h3>
+        <p>
+          Leave us your messages, your thoughts, your suggestions, your proposals, your questions. 
+          Anything that just traverse your mind.
+        </p>
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15918.556200625686!2d9.750961!3d4.09366!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3261f47a8cc49eb!2sAgence%20iceberg%20plus!5e0!3m2!1sfr!2snl!4v1638675095055!5m2!1sfr!2snl" class="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up">
+
+        <!-- Output Message message (Bootstrap-v5 only) -->
+        {% for msg in messages %}
+          <div class="alert alert-{%if msg.level_tag == error %}danger{% else %}{{msg.level_tag}}{% endif %} alert-dismissible fade show" role="alert">
+            <i class="bi bi-{%if msg.level_tag == error %}exclamation-octagon-fill{% elif msg.level_tag == info %}info-circle-fill{% elif msg.level_tag == warning %}exclamation-triangle-fill{% else %}check-circle-fill{% endif %}"></i>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              {{msg.message}}
+          </div>
+        {% endfor %}
+          
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>
+                Awae-Ewonkang, Yaounde, <br>
+                BP 30947 Yaounde, Cameroon
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="info-box mb-4">
+              <i class="bx bx-time"></i>
+              <h3>Opening Hours</h3>
+              <p>
+                Monday - Friday: 10am - 6pm <br>
+                Saturday : 10am - 2pm | Sunday: Closed
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p> <small class="text-muted">Work:</small> joelfah2003@gmail.com</p>
+              <p> <small class="text-muted">Home:</small> joelfah2003@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p> <small class="text-muted">Work:</small> +237 656 997 810</p>
+              <p> <small class="text-muted">Home:</small> +237 656 997 810</p>
+              <p></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <form action="{% url 'GetMessage' %}" method="POST" role="form" class="php-email-form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <!-- <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required> -->
+                  {{modelform.name}}
+                </div>
+                <div class="col-md-4 form-group">
+                  <!-- <input type="number" name="phone" class="form-control" id="phone" placeholder="Your phone number" required> -->
+                  {{modelform.phone}}
+                </div>
+                <div class="col-md-4 form-group">
+                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Your email" required> -->
+                  {{modelform.email}}
+                </div>
+              </div>
+              <div class="form-group">
+                <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required> -->
+                {{modelform.subject}}
+              </div>
+              <div class="form-group">
+                <!-- <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea> -->
+                {{modelform.message}}
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn form-control">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid opacity-50">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Contact Section -->
+{% endblock body %}
+    

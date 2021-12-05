@@ -78,7 +78,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% if nbar == 'home' %} #hero {% else %} {% url 'home' %} {% endif %}">Home</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% url 'home' %}">Home</a></li>
             <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><a href="{% if nbar == 'home' %} #services {% else %} {% url 'services' %} {% endif %}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="#">Service 0</a></li>
@@ -97,12 +97,19 @@
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="{% if nbar == 'home' %} #realisation {% else %} {% url 'realisation' %} {% endif %}">Realisation</a></li>
-            <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% if nbar == 'home' %} #contact {% else %} {% url 'contact' %} {% endif %}">Contacts</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% url 'contact' %}">Contacts</a></li>
             <li><a class="nav-link scrollto {% if nbar == 'about' %} active {% endif %}" href="{% if nbar == 'home' %} #about {% else %} {% url 'about' %} {% endif %}">Genie D'Afrik</a></li>
-            <li><a class="button" href="#">Obtenir un devis<i class="bi bi-journal-check"></i></a></li>
-          <div class="d-flex" style="margin-left: 5%;">
-          </div>
+            <li><a class="button" href="#" style="margin: 10px;">Obtenir un devis<i class="bi bi-journal-check"></i></a></li>
         </ul>
+        <div class="social-links d-block d-inline-flex align-items-center">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="#" class="instagram"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-whatsapp"></i></a>
+            <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-github"></i></a> -->
+        </div>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -116,7 +123,7 @@
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" data-aos="fade-up">
 
     <div class="footer-newsletter">
       <div class="container">
@@ -135,7 +142,7 @@
       </div>
     </div>
 
-    <div class="footer-top bg-dark">
+    <div class="footer-top">
       <div class="container">
           <div class="row">
               
@@ -146,8 +153,8 @@
                     Awae-Ewonkang <br>
                     Yaounde, BP 30947 Yaounde <br>
                     Cameroon <br><br>
-                    Phone:<strong></strong> kit0263559965+*9-+<br>
-                    Email:<strong></strong> kit0263559965+*9-+>
+                    Phone:<strong>&ThickSpace;+(237) 656 997 810</strong> <br>
+                    Email:<strong>&ThickSpace; joelfah2003@gmail.com</strong>
                 </p>
             </div>
 
@@ -186,6 +193,9 @@
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                 </div>
+                <br>
+                <hr>
+                <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid" style="width: 100%; height: 11vh; object-fit: cover; opacity: 0.7;">
             </div>
 
         </div>

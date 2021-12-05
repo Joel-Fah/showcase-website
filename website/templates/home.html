@@ -3,12 +3,244 @@
 
 <!-- Title of the page. -->
 {% block title %}
-  GDA &dash; Home
+  Home
 {% endblock title %}
 
 <!-- Body of the page -->
 
 {% block body %}
-    <h1>This is home page...</h1>
+<!-- Home page Caroussel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'assets/img/image.png' %}" class="card-img" alt="..." style="width: 100%; height: 76vh !important; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block" style="text-align: left;">
+        <h6 class="text-capitalize">Manufacture a variety of high quality products</h6>
+        <h1 class="text-capitalize">Serve as consultants for all industrial needs</h1>
+        <p class="w-100" style="text-align: left;">
+          Develop our corporate strengths we have established a corporate to maintain strong
+          core values that truly reflect the philosophy.
+        </p>
+        <a href="#" class="btn text-capitalize even">More about us</a>
+        <a href="#" class="btn text-capitalize odd">Our Services</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'assets/img/ks-rental.jpg' %}" class="d-block" alt="..." style="width: 100%; height: 76vh !important; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h6 class="text-capitalize">A grade commercial &amp; industrial project</h6>
+        <h1 class="text-capitalize">Manufacture a variety of high quality products</h1>
+        <p class="w-100">
+          Develop our corporate strengths we have established a corporate to maintain strong
+          core values that truly reflect the philosophy.
+        </p>
+        <a href="#" class="btn text-capitalize even">More about us</a>
+        <a href="#" class="btn text-capitalize odd">Our Services</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'assets/img/image-testimony.png' %}" class="d-block" alt="..."  style="width: 100%; height: 76vh !important; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block" style="text-align: right;">
+        <h6 class="text-capitalize">Manufacture a variety of high quality products</h6>
+        <h1 class="text-capitalize">A grade commercial &amp; industrial project</h1>
+        <p class="w-100" style="text-align: right;">
+          Develop our corporate strengths we have established a corporate to maintain strong
+          core values that truly reflect the philosophy.
+        </p>
+        <a href="#" class="btn text-capitalize even">More about us</a>
+        <a href="#" class="btn text-capitalize odd">Our Services</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- ======= Featured Services Section ======= -->
+<section id="featured-services" class="featured-services">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <!-- <h2>Featured Services</h2> -->
+      <h3>Featured <span>Services</span>. </h3>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+        <div class="carousel-inner" style="height: 85vh !important;">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                  <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                      We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                      It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+<!-- End Featured Services Section -->
 {% endblock body %}
     

@@ -79,7 +79,7 @@
       <nav id="navbar" class="navbar">
         <ul>
             <li><a class="nav-link scrollto {% if nbar == 'home' %} active {% endif %}" href="{% url 'home' %}">Home</a></li>
-            <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><a href="{% if nbar == 'home' %} #services {% else %} {% url 'services' %} {% endif %}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown {% if nbar == 'services' %} active {% endif %}"><a href="{% url 'services' %}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="#">Service 0</a></li>
                 <li class="dropdown"><a href="#"><span>Service 1    </span> <i class="bi bi-chevron-right"></i></a>
@@ -98,18 +98,18 @@
             </li>
             <li><a class="nav-link scrollto" href="{% if nbar == 'home' %} #realisation {% else %} {% url 'realisation' %} {% endif %}">Realisation</a></li>
             <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% url 'contact' %}">Contacts</a></li>
-            <li><a class="nav-link scrollto {% if nbar == 'about' %} active {% endif %}" href="{% if nbar == 'home' %} #about {% else %} {% url 'about' %} {% endif %}">Genie D'Afrik</a></li>
+            <li><a class="nav-link scrollto {% if nbar == 'about' %} active {% endif %}" href="{% url 'about' %}">Genie D'Afrik</a></li>
             <li><a class="button" href="#" style="margin: 10px;">Obtenir un devis<i class="bi bi-journal-check"></i></a></li>
+            <div class="social-links d-flex text-center w-50">
+                <a href="#" class=""><i class="bi bi-twitter"></i></a>
+                <a href="#" class=""><i class="bi bi-facebook"></i></a>
+                <a href="#" class=""><i class="bi bi-linkedin"></i></i></a>
+                <a href="#" class=""><i class="bi bi-telegram"></i></a>
+                <!-- <a href="#" class=""><i class="bi bi-whatsapp"></i></a> -->
+                <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-github"></i></a> -->
+            </div>
         </ul>
-        <div class="social-links d-block d-inline-flex align-items-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            <a href="#" class="instagram"><i class="bi bi-telegram"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-whatsapp"></i></a>
-            <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-github"></i></a> -->
-        </div>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 

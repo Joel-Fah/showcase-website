@@ -1,0 +1,241 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<!-- Title of the page. -->
+{% block title %}
+  About Us
+{% endblock title %}
+
+<!-- Body of the page -->
+
+{% block body %}
+    <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <!-- Uncomment below for hero bg with side brand image. -->
+    <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="logo" class="img-fluid displayed"> -->
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h6 class="text-capitalize">Building the future, restoring the past.</h6>
+      <h1>Welcome to <span>Genie d'Afrik</span>.</h1>
+      <h2 class="text-white text-capitalize">Individually asses each plan &amp; <br> offer optimal solutions.</h2>
+      <div class="d-flex">
+        <a href="#" class="btn text-capitalize even">Explore</a>
+        <a href="#" class="btn text-capitalize odd">Our Services</a>
+        <!-- You might have time to make a short video description of the company.
+        TODO: Make short video to describe the company. Then add the link below.-->
+        <a href="" class="glightbox btn-watch-video displayed"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+      </div>
+      <!-- Uncomment below to have video link on hero on mobile view. -->
+      <!-- <div class="d-flex undisplay" style="padding-top: 10px;">
+        <a href="" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+      </div> -->
+    </div>
+    <!-- Uncomment below for hero bg with side brand image for mobile. -->
+    <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="logo" class="img-fluid undisplay" width="200" height="200"> -->
+  </section>
+  <!-- End Hero -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <!-- <h2>About Us</h2> -->
+        <h5>Manufature a variety of high quality products.</h5>
+        <h3 class="text-capitalize">Industrial & Manufacturing <span>Company</span>.</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-capitalize">A Leading Industrial & Manufacturing Company, Serving Since 1997.</h4>
+            <p class="fst-italic">
+                Ever heard about <strong>Google Developer Student Clubs (GDSC)</strong>? Whatever your answer, that's where 
+                the idea came from. We, although our <strong>student</strong> status, decided to become members of 
+                this community and later became active core team members. From this community, we learned
+                a lot and wanted to bring up something. But with all the school work and daily home chores, 
+                things weren't that easy. We kept in our minds that: <strong>Everything we run away from 
+                has power over us, everything we go through, we conquer</strong>. Two things mainly 
+                contributed to the realization of this project:
+            </p>
+            <hr>
+            <small class="text-muted">
+                There was no reason for us to lower our standards to accomodate with those that don't want 
+                to raise theirs. By this, we saw ourselves rising to the top.
+            </small>
+        </div>
+        <div class="col-lg-4 pt-4 pt-lg-0 content d-flex flex-column justify-content-center more" data-aos="fade-right" data-aos-delay="100">
+          <!-- <img src=" {% static 'assets/img/about.jpg' %} " class="img-fluid" alt=""> -->
+              <div class="d-flex">
+                <div class="w-50" style="background: #ff7607; margin-top: 10%;"></div>
+                <div class="" style="box-shadow: 5px -5px 30px #929191;">
+                    <!-- TODO: Change the image below later to video link. -->
+                    <img src=" {% static 'assets/img/about.jpg' %} " class="img-fluid" alt="" style="border: 3px solid #ff7607;">
+                </div>
+              </div>
+              <div class="w-50 text-capitalize text-white vid-div" style="margin-top: 0px; background: #ff7607; padding: 10px; height: 8vh;">
+                <a href="" class="text-white video"><i class="bi bi-play-circle"></i> Watch Video</a>
+              </div>
+        </div>
+        <div class="col-lg-4 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <ul>
+            <li>
+              <i class="bx bi-puzzle"></i>
+              <div>
+                <h5>The Solution Challenge - GDSC</h5>
+                <p>
+                  During this event, each university hosting such a community was to propose a solution 
+                  to a real life problem. On our side, we decided to solve the problem of change when 
+                  paying taxi trips and we named it MyTPS. So, that was our solution we proposed to 
+                  the challenge. We highly believed that we'll be among the top in the Google ranking. 
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="bx bi-person-circle"></i>
+              <div>
+                <h5>Personal Development & Achievement</h5>
+                <p>
+                  Regarding the school context, we did not also want to have completed the Bachelor degree 
+                  with no real projects done. So, we obtained motivation too from this fact. Though it was 
+                  not that easy to manage between school work and the project (MyTPS), all we wanted is to 
+                  give our best in everything.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h3>A Matter Of <span>Numbers</span>.</h3>
+            <p>
+              Sometimes it is very difficult to convince just with some good talking. 
+              At Genie d'Afrik, we let the numbers speak for us.
+            </p>
+        </div>
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Satisfied Clients</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Realisations</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-headset"></i>
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-people"></i>
+            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="zoom-in">
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src=" {% static 'assets/img/testimonials/testimonials-1.jpg' %} " class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                We aimed at making life easy with our taxi services but we are growing far more than our expectations.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src=" {% static 'assets/img/testimonials/testimonials-2.jpg' %} " class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src=" {% static 'assets/img/testimonials/testimonials-3.jpg' %} " class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src=" {% static 'assets/img/testimonials/testimonials-4.jpg' %} " class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src=" {% static 'assets/img/testimonials/testimonials-5.jpg' %} " class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+{% endblock body %}
+    

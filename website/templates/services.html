@@ -9,124 +9,133 @@
 <!-- Body of the page -->
 
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<title>POUR mes test</title>
-<link rel="stylesheet"  href="css/bootstrap.min.css">
-<link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
-<script src="fontawesome-free-5.15.4-web/js/all.js"></script>
-</head>
-<body>
-    <i class="far fa-nom-icone"></i>
-    <i class="fas fa-tank"></i>
-      <div class="bing" id="section1">
-          <div class="row">
-              <span class="rose-text">
-                    Building The Future,Restoring The Past.
-              </span>
-              <h1 class="solution">
-                  Providing Innovative & <br>
-                  Soutnable Solution.
-              </h1>
-              <button id="top-button" class="btn btn-info">
-                  Shedule And Apointment.
-                  
-              </button>
-          </div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <!-- Uncomment below for hero bg with side brand image. -->
+    <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="logo" class="img-fluid displayed"> -->
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h6 class="text-capitalize">Building the future, restoring the past.</h6>
+      <h1>Your need, Our <span>Devotion</span>.</h1>
+      <h2 class="text-white text-capitalize">Providing innovative &amp; <br> sustainable solutions.</h2>
+      <div class="d-flex">
+        <a href="#" class="btn text-capitalize even">Schedule an appointment &ThickSpace;<i class="bi bi-calendar-event" style="font-size: 15pt;"></i> </a>
       </div>
-      <div class="containe"  id="section2">
-        <center>
-            <span class="rose-text">
-                The Best Industry And Companie Service.
-          </span>
-        </center>
-        <center>
-            <h1>
-                <center>Povide Higt Performance Services For<br></center>
-                <center>Multiples Industryes & Technologie.</center>
-            </h1>
-        </center>
+      <!-- Uncomment below to have video link on hero on mobile view. -->
+      <!-- <div class="d-flex undisplay" style="padding-top: 10px;">
+        <a href="" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+      </div> -->
+    </div>
+    <!-- Uncomment below for hero bg with side brand image for mobile. -->
+    <!-- <img src=" {% static 'assets/img/logo1.png' %} " alt="logo" class="img-fluid undisplay" width="200" height="200"> -->
+  </section>
+  <!-- End Hero -->
+
+  <!-- Services Section -->
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <!-- <h2>Featured Services</h2> -->
+        <h6>THe best industry and company service.</h6>
+        <h3>Provides <span> High Performance Services</span> For Multiple Industries & Technologies!. </h3>
+      </div>
         <div class="row">
-            <div class="container" id="carte">
-                <div class="row">
-                    <div class="card" style="width: 22rem;">
-                        <img src="images/chouse1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <i class="icon-tank-1"></i>
-                          <h5 class="card-title">Petroleum & Gas Energy</h5>
-                          <p class="card-text">Petroleum and natural gas are nonrenewable sources of energy, a liquid found underground that can be used to make gasoline.</p>
-                          <a href="#" class="btn" id="btn-rigth">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
                     </div>
-                    <div class="card" style="width: 22rem;">
-                        <img src="images/chouse1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Construction & Engineering</h5>
-                          <p class="card-text">Professional discipline deals with designing, planning, construction and infrastructures management such as roads, tunnels, bridges.</p>
-                          <a href="#" class="btn" id="btn-rigth">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 22rem;">
-                        <img src="images/chouse1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Mechanical Engineering</h5>
-                          <p class="card-text">Materials science principles to design, analyze, manufacture, and maintain mechanical systems. It is one of the oldest .</p>
-                          <a href="#" class="btn" id="btn-rigth">Read More <i<i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="card" style="width: 22rem;">
-                        <img src="images/chouse1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <i class="icon-tank-1"></i>
-                          <h5 class="card-title">Basic & Industrial Chemicals</h5>
-                          <p class="card-text">Produced in huge quantities and critical ingredients for products used by both industry and the general consumer.</p>
-                          <a href="#" class="btn" id="btn-rigth">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                
-                
-                    <div class="card" style="width: 22rem;">
-                        <img src="images/chouse1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Automotive Manufacturing</h5>
-                          <p class="card-text">The automotive industry comprises a wide range of companies involved in the design, development, manufacturing, and selling.</p>
-                          <a href="#" class="btn" id="btn-rigth">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                
-               
-                <div class="card" style="width: 22rem;">
-                    <img src="images/chouse1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Bridge Construction</h5>
-                      <p class="card-text">Building a bridge is a complex undertaking requiring knowledge and expertise. Several variables, including engineering.</p>
-                      <a href="#" class="btn" id="btn-rigth">Read More <i class="fas fa-arrow-right"></i></a>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Register</a>
                     </div>
                 </div>
-                </div>
-                 
-                       
-                   
-                </div>
-                <div class="row">
-                   
             </div>
         </div>
-      </div>
-<script src="js/bootstrap.min.js"></script>
-<script src="/jquery-3.6.0.slim.min.js"></script>
-</body>
-</html>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Explore</a>
+                    </div>
+                </div>
+            </div>
 
-<style>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="main-box">
+                    <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <h4 class="title"><a href="" class="text-white">Taxi Payment System</a></h4>
+                    <p class="description">
+                        We provide to you a means of paying your taxi trip whether you have coins or not. <br>
+                        It's fast and free of charges.
+                    </p>
+                    <a href="" class="btn btn-register">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- End Services -->
+
+<!-- <style>
     .rose-text{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: rgb(255, 118, 7);
@@ -226,5 +235,5 @@
     .container{
         width: 100%;
     }
-</style>
+</style> -->
 {% endblock body %}

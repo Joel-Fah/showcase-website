@@ -96,7 +96,7 @@
                 <li><a href="#">Service 4</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="{% if nbar == 'home' %} #realisation {% else %} {% url 'realisation' %} {% endif %}">Realisation</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'realisation' %}">Realisation</a></li>
             <li><a class="nav-link scrollto {% if nbar == 'contact' %} active {% endif %}" href="{% url 'contact' %}">Contacts</a></li>
             <li><a class="nav-link scrollto {% if nbar == 'about' %} active {% endif %}" href="{% url 'about' %}">Genie D'Afrik</a></li>
             <li><a class="button" href="#" style="margin: 10px;">Obtenir un devis<i class="bi bi-journal-check"></i></a></li>
@@ -195,7 +195,7 @@
                 </div>
                 <br>
                 <hr>
-                <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid" style="width: 100%; height: 11vh; object-fit: cover; opacity: 0.7;">
+                <img src="{% static 'assets/img/logo1.png' %}" alt="" class="img-fluid">
             </div>
 
         </div>

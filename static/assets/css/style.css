@@ -456,6 +456,10 @@ h6 {
 /*--------------------------------------------------------------
 # Carousel Section
 --------------------------------------------------------------*/
+#carouselPcTop button,
+#carouselPc button{
+  border: none;
+}
 .carousel .carousel-indicators [data-bs-target]{
   background-color: #ff7607 !important;
 }

@@ -2,6 +2,14 @@ from django.shortcuts import render, redirect
 from django.utils.html import format_html
 from django.contrib import messages
 from website.forms import ContactForm
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+from .models import Subscriber
+from .forms import SubscriberForm
+import random
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+
 
 # Create your views here.
 def home(request):
@@ -63,7 +71,7 @@ def GetMessage(request):
             try:
                 form.save()
                 message_out_success = format_html(
-                    f'Thanks for contacting us, <strong> {name} </strong> ! Your message has been sent successfully. You will be email a copy at <strong> {email} </strong> !'
+                    f'Thanks for contacting us, <strong> {name} </strong> ! Your message has been sent successfully. You will be email a copy at <strong> {email}</strong>. Feel free to fill the form again if you wish.'
                 )
                 messages.success(
                     request,
@@ -93,3 +101,56 @@ def about(request):
         'nbar': 'about',
     }
     return render(request, 'about.html', context)
+
+def serviceDetails(request):
+    context = {
+        'nbar': 'serviceDetails'
+    }
+    return render(request, 'services-detail.html', context)
+
+
+
+
+def random_digits(): 
+    return "%0.12d" % random.randint(0, 999999999999) 
+
+@csrf_exempt 
+def new(request): 
+    if request.method == 'POST': 
+        sub = Subscriber(email=request.POST['email'], conf_num=random_digits()) 
+        sub.save()
+        message = Mail(
+        from_email=settings.FROM_EMAIL, 
+        to_emails=sub.email,
+        subject='Newsletter Confirmation',
+        html_content='Thank you for signing up for my email newsletter! \ Please complete the process by \ <a href="{}/confirm/?email={}&conf_num={}"> clicking here to \ confirm your registration</a>.'.format(request.build_absolute_uri('/confirm/'), sub.email, sub.conf_num)) 
+        sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
+        response = sg.send(message) 
+        context = {
+            'email': sub.email,
+            'action': 'added',
+            'form': SubscriberForm()
+        }
+        return render(request, 'email-news.html', context) 
+    else: 
+        context = {
+            'form': SubscriberForm()
+        }
+        return render(request, 'email-news.html', context)
+
+def confirm(request):
+    sub = Subscriber.objects.get(email=request.GET['email'])
+    if sub.conf_num == request.GET['conf_num']:
+        sub.confirmed = True 
+        sub.save()
+        context = {
+            'email': sub.email,
+            'action': 'confirmed'
+        }
+        return render(request, 'email-news.html', context) 
+    else: 
+        context = {
+            'email': sub.email,
+            'action': 'denied'
+        }
+        return render(request, 'email-news.html', context)

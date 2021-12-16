@@ -1,10 +1,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@import url("../font/GoogleSansRegular.ttf");
-@import url("../font/Poppins-Bold.ttf");
-@import url("../font/Poppins-Medium.ttf");
-@import url("../font/Poppins-Regular.ttf");
+@import url(../font/GoogleSansRegular.ttf);
+@import url(../font/PoppinsRegular.ttf);
 
 body {
   font-family: "GoogleSansRegular", sans-serif;
@@ -12,7 +10,7 @@ body {
 }
 
 *p, h1 {
-  font-family: "Poppins-Regular";
+  font-family: "PoppinsRegular";
 }
 
 a {
@@ -456,7 +454,11 @@ h6 {
 /*--------------------------------------------------------------
 # Carousel Section
 --------------------------------------------------------------*/
+#carouselExampleCaptions button,
 #carouselPcTop button,
+#carouselTabletTop button,
+#carouselMobile button,
+#carouselMobileTop button,
 #carouselPc button{
   border: none;
 }
@@ -681,6 +683,12 @@ h6 {
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
+  }
+}
+@media (width: 1024px), (min-width: 1440px) {
+  #hero .even,
+  #hero .odd{
+    width: fit-content;
   }
 }
 @media (max-width: 768px) {
@@ -908,7 +916,7 @@ section {
   top: 0;
   border-radius: 0px;
 }
-.featured-services img{
+.featured-services .main-box img{
   padding: 0;
   object-fit: cover;
   width: 100%;
@@ -982,6 +990,118 @@ section {
   background: #626264;
   transition: all 0.3s ease-in-out;
 }
+.featured-services .desktop-service{
+  margin-left: 5%;
+}
+.featured-services .image-box-outline{
+  border: 10px #ff7607 solid;
+  background: #fff;
+  padding: 30px;
+  width: 40vw;
+  height: 55vh;
+  display: block;
+}
+.featured-services .image-box-outline img{
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: -3px 5px 25px #555555;
+}
+.featured-services .text-box-bg{
+  background: #ff7607;
+  text-align: left;
+  padding: 20px;
+  width: 40%;
+  height: fit-content;
+  position: relative;
+  top: 65px;
+  left: -70px;
+}
+.featured-services .text-box-bg h4{
+  font-weight: 700;
+}
+.featured-services .text-box-bg p{
+  text-align: justify;
+}
+.featured-services .text-box-bg a{
+  border: 3px #404040 solid;
+  border-radius: 0;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.featured-services .text-box-bg a:hover{
+  color: #fff;
+  background: #404040;
+}
+.featured-services .image-box-bg{
+  /* border: 10px #ff7607 solid; */
+  background: #ff7607;
+  padding: 30px;
+  width: 40vw;
+  height: 55vh;
+}
+.featured-services .image-box-bg img{
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: -3px 5px 25px #555555;
+  float: right;
+}
+.featured-services .text-box-outline{
+  border: 10px #ff7607 solid;
+  background: #fff;
+  text-align: left;
+  padding: 20px;
+  width: 40%;
+  height: fit-content;
+  position: relative;
+  top: 60px;
+  left: 70px;
+}
+.featured-services .text-box-outline h4{
+  font-weight: 700;
+}
+.featured-services .text-box-outline p{
+  text-align: justify;
+}
+.featured-services .text-box-outline a{
+  border: 3px #404040 solid;
+  border-radius: 0;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.featured-services .text-box-outline a:hover{
+  color: #fff;
+  background: #404040;
+}
+.featured-services .mobile-service{
+  display: none;
+}
+@media (width: 1024px), (width: 1440px){
+  .featured-services .image-box-outline,
+  .featured-services .image-box-bg{
+    width: 55vw;
+    height: 50vh;
+  }
+  .featured-services .text-box-bg,
+  .featured-services .text-box-outline{
+    width: 50%;
+  }
+  .featured-services .text-box-outline{
+    left: 50px;
+  }
+  .featured-services .text-box-bg{
+    left: -50px;
+  }
+}
+@media (max-width: 1023px) {
+  .featured-services .desktop-service{
+    display: none;
+  }
+  .featured-services .mobile-service{
+    display: contents;
+  }
+}
 
 /*--------------------------------------------------------------
 # About
@@ -1052,7 +1172,7 @@ section {
   transition: all ease-in 0.3s;
 }
 .about .video:hover{
-  padding: 8%;
+  padding-left: 8%;
   background: #ff7607 !important;
 }
 
@@ -1350,7 +1470,7 @@ section {
 }
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #fbbc04;
+  color: #ff7607;
 }
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
@@ -1390,7 +1510,7 @@ section {
 }
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #fbbc04;
+  color: #fff;
 }
 .portfolio .portfolio-item .portfolio-info .details-link {
   right: 10px;
@@ -1440,13 +1560,13 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #fbbc04;
+  border: 1px solid #ff7607;
 }
 .portfolio-details
   .portfolio-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: #fbbc04;
+  background-color: #ff7607;
 }
 .portfolio-details .portfolio-info {
   padding: 30px;
@@ -1465,7 +1585,7 @@ section {
   font-size: 15px;
 }
 .portfolio-details .portfolio-info span {
-  color: #fbbc04;
+  color: #ff7607;
 }
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
@@ -1474,7 +1594,7 @@ section {
   padding-top: 30px;
 }
 .portfolio-details .portfolio-description span {
-  color: #fbbc04;
+  color: #ff7607;
 }
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;

@@ -20,6 +20,14 @@
           Anything that just traverse your mind.
         </p>
       </div>
+      <!-- Output Message message (Bootstrap-v5 only) -->
+      {% for msg in messages %}
+      <div class="alert alert-{%if msg.level_tag == error %}danger{% else %}{{msg.level_tag}}{% endif %} alert-dismissible fade show" role="alert">
+        <i class="bi bi-{%if msg.level_tag == error %}exclamation-octagon-fill{% elif msg.level_tag == info %}info-circle-fill{% elif msg.level_tag == warning %}exclamation-triangle-fill{% else %}check-circle-fill{% endif %}"></i>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          {{msg.message}}
+      </div>
+    {% endfor %}
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 ">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15918.556200625686!2d9.750961!3d4.09366!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3261f47a8cc49eb!2sAgence%20iceberg%20plus!5e0!3m2!1sfr!2snl!4v1638675095055!5m2!1sfr!2snl" class="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -27,15 +35,6 @@
       </div>
       <div class="container" data-aos="fade-up">
 
-        <!-- Output Message message (Bootstrap-v5 only) -->
-        {% for msg in messages %}
-          <div class="alert alert-{%if msg.level_tag == error %}danger{% else %}{{msg.level_tag}}{% endif %} alert-dismissible fade show" role="alert">
-            <i class="bi bi-{%if msg.level_tag == error %}exclamation-octagon-fill{% elif msg.level_tag == info %}info-circle-fill{% elif msg.level_tag == warning %}exclamation-triangle-fill{% else %}check-circle-fill{% endif %}"></i>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              {{msg.message}}
-          </div>
-        {% endfor %}
-          
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-3">
             <div class="info-box mb-4">

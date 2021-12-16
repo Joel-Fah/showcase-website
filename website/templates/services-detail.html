@@ -1,196 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<title>POUR mes test</title>
-<link rel="stylesheet"  href="css/bootstrap.min.css">
-<link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
-<script src="fontawesome-free-5.15.4-web/js/all.js"></script>
-</head>
-<body>
-    <!--start jombotrom-->
-    <div class="jombotrom">
-        <span class="hello">
-            <center>
-                Higway Energi Station.
-            </center>
-            <center>
-                <span id="home">
-                    <a href="home.html">
-                        <u> Home. </u></a> <i class="fa fa-angle-right"></i> 
-                     Higway Energy Station.
-                </span>
-            </center>
-        </span>
-    </div>
-<!--End jombotrom-->
-<!--start of the second part section-->
-<div class="container" id="service-info">
-    <div class="row">
-        <div class="col-md-5 col-sm-12 col-lg-4" id="card">
-            <span class="info-sevice-card">
-                Industries Served.
-            </span>
-            <div class="card-other" style="width: 18rem;">
-               <div class="container" style="justify-content: space-around;">
-                
-                    <div class="services-other">
-                        <a href="#">
-                        Petroleum & Gas
-                    </a>
-                     </div>
-               
-                <div class="services-other">
-                    <a href="#">
-                   Construction & Engineering
-                </a>
+{% extends 'main.html' %}
+{% load static %}
+
+<!-- Title of the page -->
+
+{% block title %}
+    Service Details
+{% endblock title %}
+
+<!-- Body of the page -->
+
+{% block body %}
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+        <div class="row gy-4">
+
+        <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                <img src=" {% static 'assets/img/portfolio/portfolio-details-1.jpg' %} " alt="">
                 </div>
-                <div class="services-other" style="background-color:rgb(255, 118, 7) ;">
-                   <a href="#">
-                     Mechanical Engineering
-           </a>     </div>
-                <div class="services-other">
-                  <a>  Basic & Industrial Chemicals
-    </a>            </div>
-                <div class="services-other">
-                  <a href="#">
-                     Automotive Manufacturing
-        </a>        </div>
-                <div class="services-other">
-                   <a href="#">
-                     Bridge Construction
-              </a>  </div>
-               </div>
+
+                <div class="swiper-slide">
+                <img src=" {% static 'assets/img/portfolio/portfolio-details-2.jpg' %} " alt="">
+                </div>
+
+                <div class="swiper-slide">
+                <img src=" {% static 'assets/img/portfolio/portfolio-details-3.jpg' %} " alt="">
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class="col-md-7 col-sm-12 col-lg-8" id="service-info-text">
-            <span class="info-sevice-card">
-                Overview
-            </span>
-            <br>
-           <blockquote>
-               <p>
-                Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for
-               </p>
-               <p>
-                We have more than twenty years of experience. During that time, we’ve become expert in freight transportation by air and all its related services. We work closely with all major airlines around the world. Ongoing negotiations ensure that we always have the cargo space we need and the ability to offer you competitive rates - even during the high season.
-               </p>
-               <p>
-                Where possible, we’ll erect and dismantle Unit Load Devices (ULDs), reducing significantly the risk of damage to your shipment and saving you time and expense. We can do this because many of our freight stations have their own ground transportation at or around the airport.
-               </p>
-           </blockquote>
+
+        <div class="col-lg-4">
+            <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            </ul>
+            </div>
+            <div class="portfolio-description">
+            <h2>This is an example of portfolio detail</h2>
+            <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            </p>
+            </div>
         </div>
+
+        </div>
+
     </div>
+</section>
+<!-- End Portfolio Details Section -->
+{% endblock body %}
     
-</div>
-<!--end of the second part section-->
-<script src="js/bootstrap.min.js"></script>
-<script src="/jquery-3.6.0.slim.min.js"></script>
-</body>
-</html>
-
-<style>
-   /* <!--jombotrom style stat--> */
-    .jombotrom{
-        background-color: rgba(27, 26, 26, 0.55);
-        padding: 20px;
-        min-height: 500px;
-    }
-    #home a{
-        text-decoration: none;
-        color: white;
-    }
-
-    .hello{
-        box-sizing: border-box;
-        margin: 12%;
-        font-size: 60px;
-        color: white;
-        font-weight: 500;
-        font: 15px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    #home{
-        font-size: 17px;
-        color: white;
-        font-weight: 100;
-        font: 10px; 
-    }
-    #home u{
-        text-decoration: none;
-        border-bottom: rgb(255, 118, 7) solid 1px;
-    }
-    #home u:hover{
-        color: rgb(255, 118, 7);
-    }
-    /*en jombotrom*/
-    /*start of srvice-info*/
-    #service-info{
-        margin: 8%;
-        margin-right: 3%;
-    }
-    #card{
-        background-color: #f4f4f4;
-        justify-content: center;
-        box-sizing: border-box;
-    }
-    .info-sevice-card{
-        margin-top: 40px;
-        font-size: 30px;
-        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 600;
-        padding: 20px;
-        justify-content: center;
-        max-height: 300px;
-        max-width: 150px;
-        
-    }
-    .services-other{
-        
-        border: 1px  rgb(238, 219, 197);
-        padding:10px 20px;
-        margin: 5px;
-        color: black;
-        background-color: white;
-        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 700;
-        justify-content: center;
-        width: 100%;
-    }
-    .services-other:hover{
-        background-color:rgb(255, 118, 7) ;
-        transition: 0.75s;
-        cursor: pointer;
-    }
-    .services-other a{
-        text-decoration: none;
-        color: black;
-    }
-    .services-other:active{
-        background-color: rgb(255, 118, 7);
-
-    }
-    .info-sevice-card{
-        margin-left: 3%;
-        text-decoration: none;
-    }
-    .info-sevice-card a{
-        text-decoration: none;
-    }
-    #service-info-text p{
-       color: black;
-        opacity: 0.5;
-        font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        padding-left: 30px;
-    }
-    @media (max-width:600px) {
-        #service-info-text{
-            margin-top: 25px;
-        } 
-    }
-</style>

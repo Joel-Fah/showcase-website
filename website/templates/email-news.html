@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<!-- Title of the page. -->
+{% block title %}
+  Email
+{% endblock title %}
+
+<!-- Body of the page -->
+
+{% block body %}
+<div class="container">
+    <div class="col-12"> 
+   <h1>Email Newsletter</h1>
+    </div>
+    <div class="col-12"> 
+   {% if email %}
+    <p>{{ email }} has been {{ action }}.</p> 
+   {% endif %}
+    </div> 
+   {% if form %}
+    <div class="col-12 col-md-4"> 
+   <form method="post" novalidate> 
+   {% csrf_token %}
+    {{ form }}
+    <br>
+    <button type="submit" class="btn btn-success">Subscribe!</button>
+    </form>
+    </div>
+    {% endif %} 
+   </div>
+{% endblock body %}

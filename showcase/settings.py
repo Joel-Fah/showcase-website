@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*teg+$6vsi4g$#rt3zw9^gs^i%f+!^xs$_h7gstem4situsvfg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -143,3 +143,7 @@ EMAIL_HOST_USER = 'joelfah2003@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Twilio SendGrid configuration
+FROM_EMAIL = 'joelfah2003@gmail.com'
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY') 

@@ -9,6 +9,6 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('GetMessage/', GetMessage, name='GetMessage'),
     path('about/', about, name='about'),
-    path('new/', new, name='new'),
+    # path('new/', new, name='new'),
     path('confirm/', confirm, name='confirm'),
 ]
